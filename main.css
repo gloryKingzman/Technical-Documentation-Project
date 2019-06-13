@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Poppins:300,400,700|Rubik&display=swap');
+* {
+    --navy-blue: rgb(40, 44, 52);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', 'Poppins', 'Rubik', sans-serif;
+    background: rgba(231, 233, 236, 0.375);
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: 60px 1fr;
+    margin: 0;
+    padding: 0;
+}
+
+#main-header {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    background: rgb(40, 44, 52);
+}
+
+.header-container {
+    position: fixed;
+    padding-left: 40px;
+    margin: auto 0;
+    width: 100%;
+    background: var(--navy-blue);
+}
+
+.header-container a {
+    text-decoration: none;
+    vertical-align: middle;
+    margin: auto 0;
+    display: flex;
+    flex-direction: row;
+    padding-top: 20px;
+}
+
+.header-container a header {
+    padding-left: 10px;
+    /*padding-top: 10px;
+    font-size: 1.2em;*/
+    color: rgb(79, 163, 189);
+    font-weight: 500;
+}
+
+.docu {
+    color: white;
+    font-weight: 200;
+}
+
+nav {
+    width: 250px;
+    height: 100%;
+    background: rgba(231, 233, 236, 0.875);
+}
+
+#nav-container {
+    text-align: right;
+    padding-top: 40px;
+    position: fixed;
+}
+
+#nav-container a {
+    display: block;
+    padding: 10px 0;
+    text-decoration-style: none;
+    color: rgb(30, 35, 39);
+    text-decoration: none;
+    padding-right: 10px;
+}
+
+#main-doc {
+    padding: 60px 50px 0 50px;
+}
+
+.section-header {
+    font-family: 'Rubik', sans-serif;
+    font-size: 3.5em;
+    color: var(--navy-blue, rgb(0, 0, 0));
+    font-weight: bolder;
+}
+
+section {
+    padding-top: 40px;
+}
+
+.section-header,
+p,
+.code,
+h2 {
+    padding: 15px 0 15px 0;
+}
+
+.code,
+code {
+    background: var(--navy-blue);
+    color: white;
+}
