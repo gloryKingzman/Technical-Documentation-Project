@@ -11,7 +11,7 @@ body {
     font-family: 'Open Sans', 'Poppins', 'Rubik', sans-serif;
     background: rgba(231, 233, 236, 0.375);
     display: grid;
-    grid-template-columns: 300px 1fr;
+    grid-template-columns: 350px 1fr;
     grid-template-rows: 60px 1fr;
     margin: 0;
     padding: 0;
@@ -48,13 +48,18 @@ body {
     font-weight: 500;
 }
 
+a#header {
+    font-size: 1.5em;
+    font-weight: 800;
+}
+
 .docu {
     color: white;
     font-weight: 200;
 }
 
 nav {
-    width: 250px;
+    width: 300px;
     height: 100%;
     background: rgba(231, 233, 236, 0.875);
 }
@@ -71,11 +76,12 @@ nav {
     text-decoration-style: none;
     color: rgb(30, 35, 39);
     text-decoration: none;
-    padding-right: 10px;
+    padding-right: 5px;
+    margin-left: 20px;
 }
 
 #main-doc {
-    padding: 60px 50px 0 50px;
+    padding: 0 50px 0 50px;
 }
 
 .section-header {
@@ -89,6 +95,10 @@ section {
     padding-top: 40px;
 }
 
+section#helloWorld {
+    padding-top: 40px;
+}
+
 .section-header,
 p,
 .code,
@@ -96,8 +106,20 @@ h2 {
     padding: 15px 0 15px 0;
 }
 
+h2 {
+    border-top: 1px solid rgba(201, 199, 199, 0.4);
+}
+
 .code,
 code {
     background: var(--navy-blue);
     color: white;
+    border-radius: 50px;
+    display: block;
+    width: 100%;
+}
+
+code {
+    padding: 20px;
+    width: 80%;
 }

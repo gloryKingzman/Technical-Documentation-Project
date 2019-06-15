@@ -11,6 +11,9 @@
 </head>
 
 <body>
+    <script>
+        src = 'https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js'
+    </script>
     <div id="main-header">
         <div class="header-container">
             <a href="#">
@@ -22,19 +25,21 @@
 
     <nav id="navbar">
         <div id="nav-container">
-
+            <a href="#main-doc" class="nav-link" id="header">
+                <header>Main Concept</header>
+            </a>
             <a href="#helloWorld" class="nav-link">Hello World</a>
             <a href="#jsxIntro" class="nav-link">Introducing Jsx</a>
             <a href="#render" class="nav-link">Rendering Elements</a>
             <a href="#components" class="nav-link">Components and Props</a>
-            <a href="" class="nav-link">State and Life Cycle</a>
-            <a href="" class="nav-link">Handling Events</a>
-            <a href="" class="nav-link">Conditional Rendering</a>
-            <a href="" class="nav-link">List and Keys</a>
-            <a href="" class="nav-link">Forms</a>
-            <a href="" class="nav-link">Lifting Statte Up</a>
-            <a href="" class="nav-link">Composition vs Inheritance</a>
-            <a href="" class="nav-link">Thinking in React</a>
+            <a href="#stateLife" class="nav-link">State and Life Cycle</a>
+            <a href="#handling" class="nav-link">Handling Events</a>
+            <a href="#conditional" class="nav-link">Conditional Rendering</a>
+            <a href="#listKeys" class="nav-link">List and Keys</a>
+            <a href="#form" class="nav-link">Forms</a>
+            <a href="#liftingState" class="nav-link">Lifting State Up</a>
+            <a href="#composition" class="nav-link">Composition vs Inheritance</a>
+            <a href="#think" class="nav-link">Thinking in React</a>
         </div>
     </nav>
     <main id="main-doc">
@@ -53,7 +58,7 @@
             <p>
                 <a href="https://reactjs.org/redirect-to-codepen/hello-world"></a>Try it on codepen</p>
             <p>Click the link above to open an online editor. Feel free to make some changes, and see how they affect the output. Most pages in this guide will have editable examples like this one.</p>
-            <hr>
+
             <h2>How to Read This Guide</h2>
             <p>In this guide, we will examine the building blocks of React apps: elements and components. Once you master them, you can create complex apps from small reusable pieces.</p>
             <p>This is the first chapter in a step-by-step guide about main React concepts. You can find a list of all its chapters in the navigation sidebar. If you’re reading this from a mobile device, you can access the navigation by pressing the button
@@ -67,8 +72,10 @@
         <section class="main-section" id="jsxIntro">
             <header class="section-header">Introducing JSX</header>
             <p>Consider this variable declaration:</p>
-            <code>const element = <h1>Hello, world!</h1>;</code>
-            <p></p>
+            <div class="code">
+                <code>const element = h1 Hello, world! /h1;</code>
+            </div>
+
             <p>This funny tag syntax is neither a string nor HTML.</p>
             <p>t is called JSX, and it is a syntax extension to JavaScript. We recommend using it with React to describe what the UI should look like. JSX may remind you of a template language, but it comes with the full power of JavaScript.</p>
             <p>
@@ -84,12 +91,12 @@
 
             <p>In the example below, we declare a variable called name and then use it inside JSX by wrapping it in curly braces:</p>
             <div class="code"> <code>const name = 'Josh Perez';
-                                const element = >h1< Hello, {name}</h1>;
+                                const element = >h1< Hello, {name}</h1Hello,>;
                                 
                                 ReactDOM.render(
                                   element,
-                                  document.getElementById('root')
-                                );</code>
+                                  document.getElementById('root'));
+                                </code>
             </div>
             <p>You can put any valid JavaScript expression inside the curly braces in JSX. For example, 2 + 2, user.firstName, or formatName(user) are all valid JavaScript expressions. In the example below, we embed the result of calling a JavaScript function,
                 formatName(user), into an h1 element.</p>
@@ -166,14 +173,231 @@
             <p>When React sees an element representing a user-defined component, it passes JSX attributes to this component as a single object. We call this object “props”</p>
 
         </section>
-        <section class="main-section"></section>
-        <section class="main-section"></section>
-        <section class="main-section"></section>
-        <section class="main-section"></section>
-        <section class="main-section"></section>
-        <section class="main-section"></section>
-        <section class="main-section"></section>
-        <section class="main-section"></section>
+        <section class="main-section" id="stateLife">
+            <header class="section-header">Lorem Ipsum</header>
+            <p class="byline">Components let you split the UI into independent, reusable pieces, and think about each piece in isolation. This page provides an introduction to the idea of components. You can find a detailed component API reference here.</p>
+            <p>Conceptually, components are like JavaScript functions. They accept arbitrary inputs (called “props”) and return React elements describing what should appear on the screen.</p>
+            <h2>Function and Class Components</h2>
+            <p>The simplest way to define a component is to write a JavaScript function:</p>
+            <div class="code"><code>function Welcome(props) {
+                    return h1 Hello, {props.name}/h1;
+                  }</code></div>
+            <p>This function is a valid React component because it accepts a single “props” (which stands for properties) object argument with data and returns a React element. We call such components “function components” because they are literally JavaScript
+                functions.
+            </p>
+            <p>You can also use an ES6 class to define a component:</p>
+            <div class="code"><code>class Welcome extends React.Component {
+                    render() {
+                      return h1 Hello, {this.props.name}h1;
+                    }
+                  }</code></div>
+            <p>The above two components are equivalent from React’s point of view.</p>
+            <p>Classes have some additional features that we will discuss in the next sections. Until then, we will use function components for their conciseness.</p>
+            <h2>Rendering a Component</h2>
+            <p>Previously, we only encountered React elements that represent DOM tags:</p>
+            <div class="code"><code>const element = div;</code></div>
+            <p>However, elements can also represent user-defined components:</p>
+            <div class="code"><code>const element = <Welcome name="Sara" />;</code></div>
+            <p>When React sees an element representing a user-defined component, it passes JSX attributes to this component as a single object. We call this object “props”</p>
+
+        </section>
+        <section class="main-section" id="handling">
+            <header class="section-header">Lorem Ipsum </header>
+            <p class="byline">Components let you split the UI into independent, reusable pieces, and think about each piece in isolation. This page provides an introduction to the idea of components. You can find a detailed component API reference here.</p>
+            <p>Conceptually, components are like JavaScript functions. They accept arbitrary inputs (called “props”) and return React elements describing what should appear on the screen.</p>
+            <h2>Function and Class Components</h2>
+            <p>The simplest way to define a component is to write a JavaScript function:</p>
+            <div class="code"><code>function Welcome(props) {
+                    return h1 Hello, {props.name}/h1;
+                  }</code></div>
+            <p>This function is a valid React component because it accepts a single “props” (which stands for properties) object argument with data and returns a React element. We call such components “function components” because they are literally JavaScript
+                functions.
+            </p>
+            <p>You can also use an ES6 class to define a component:</p>
+            <div class="code"><code>class Welcome extends React.Component {
+                    render() {
+                      return h1 Hello, {this.props.name}h1;
+                    }
+                  }</code></div>
+            <p>The above two components are equivalent from React’s point of view.</p>
+            <p>Classes have some additional features that we will discuss in the next sections. Until then, we will use function components for their conciseness.</p>
+            <h2>Rendering a Component</h2>
+            <p>Previously, we only encountered React elements that represent DOM tags:</p>
+            <div class="code"><code>const element = div;</code></div>
+            <p>However, elements can also represent user-defined components:</p>
+            <div class="code"><code>const element = <Welcome name="Sara" />;</code></div>
+            <p>When React sees an element representing a user-defined component, it passes JSX attributes to this component as a single object. We call this object “props”</p>
+
+        </section>
+        <section class="main-section" id="conditional">
+            <header class="section-header">Lorem Ipsum</header>
+            <p class="byline">Components let you split the UI into independent, reusable pieces, and think about each piece in isolation. This page provides an introduction to the idea of components. You can find a detailed component API reference here.</p>
+            <p>Conceptually, components are like JavaScript functions. They accept arbitrary inputs (called “props”) and return React elements describing what should appear on the screen.</p>
+            <h2>Function and Class Components</h2>
+            <p>The simplest way to define a component is to write a JavaScript function:</p>
+            <div class="code"><code>function Welcome(props) {
+                    return h1 Hello, {props.name}/h1;
+                  }</code></div>
+            <p>This function is a valid React component because it accepts a single “props” (which stands for properties) object argument with data and returns a React element. We call such components “function components” because they are literally JavaScript
+                functions.
+            </p>
+            <p>You can also use an ES6 class to define a component:</p>
+            <div class="code"><code>class Welcome extends React.Component {
+                    render() {
+                      return h1 Hello, {this.props.name}h1;
+                    }
+                  }</code></div>
+            <p>The above two components are equivalent from React’s point of view.</p>
+            <p>Classes have some additional features that we will discuss in the next sections. Until then, we will use function components for their conciseness.</p>
+            <h2>Rendering a Component</h2>
+            <p>Previously, we only encountered React elements that represent DOM tags:</p>
+            <div class="code"><code>const element = div;</code></div>
+            <p>However, elements can also represent user-defined components:</p>
+            <div class="code"><code>const element = <Welcome name="Sara" />;</code></div>
+            <p>When React sees an element representing a user-defined component, it passes JSX attributes to this component as a single object. We call this object “props”</p>
+
+        </section>
+        <section class="main-section" id="listKeys">
+            <header class="section-header">Lorem Ipsum</header>
+            <p class="byline">Components let you split the UI into independent, reusable pieces, and think about each piece in isolation. This page provides an introduction to the idea of components. You can find a detailed component API reference here.</p>
+            <p>Conceptually, components are like JavaScript functions. They accept arbitrary inputs (called “props”) and return React elements describing what should appear on the screen.</p>
+            <h2>Function and Class Components</h2>
+            <p>The simplest way to define a component is to write a JavaScript function:</p>
+            <div class="code"><code>function Welcome(props) {
+                    return h1 Hello, {props.name}/h1;
+                  }</code></div>
+            <p>This function is a valid React component because it accepts a single “props” (which stands for properties) object argument with data and returns a React element. We call such components “function components” because they are literally JavaScript
+                functions.
+            </p>
+            <p>You can also use an ES6 class to define a component:</p>
+            <div class="code"><code>class Welcome extends React.Component {
+                    render() {
+                      return h1 Hello, {this.props.name}h1;
+                    }
+                  }</code></div>
+            <p>The above two components are equivalent from React’s point of view.</p>
+            <p>Classes have some additional features that we will discuss in the next sections. Until then, we will use function components for their conciseness.</p>
+            <h2>Rendering a Component</h2>
+            <p>Previously, we only encountered React elements that represent DOM tags:</p>
+            <div class="code"><code>const element = div;</code></div>
+            <p>However, elements can also represent user-defined components:</p>
+            <div class="code"><code>const element = <Welcome name="Sara" />;</code></div>
+            <p>When React sees an element representing a user-defined component, it passes JSX attributes to this component as a single object. We call this object “props”</p>
+
+        </section>
+        <section class="main-section" id="form">
+            <header class="section-header">Lorem Ipsum</header>
+            <p class="byline">Components let you split the UI into independent, reusable pieces, and think about each piece in isolation. This page provides an introduction to the idea of components. You can find a detailed component API reference here.</p>
+            <p>Conceptually, components are like JavaScript functions. They accept arbitrary inputs (called “props”) and return React elements describing what should appear on the screen.</p>
+            <h2>Function and Class Components</h2>
+            <p>The simplest way to define a component is to write a JavaScript function:</p>
+            <div class="code"><code>function Welcome(props) {
+                    return h1 Hello, {props.name}/h1;
+                  }</code></div>
+            <p>This function is a valid React component because it accepts a single “props” (which stands for properties) object argument with data and returns a React element. We call such components “function components” because they are literally JavaScript
+                functions.
+            </p>
+            <p>You can also use an ES6 class to define a component:</p>
+            <div class="code"><code>class Welcome extends React.Component {
+                    render() {
+                      return h1 Hello, {this.props.name}h1;
+                    }
+                  }</code></div>
+            <p>The above two components are equivalent from React’s point of view.</p>
+            <p>Classes have some additional features that we will discuss in the next sections. Until then, we will use function components for their conciseness.</p>
+            <h2>Rendering a Component</h2>
+            <p>Previously, we only encountered React elements that represent DOM tags:</p>
+            <div class="code"><code>const element = div;</code></div>
+            <p>However, elements can also represent user-defined components:</p>
+            <div class="code"><code>const element = <Welcome name="Sara" />;</code></div>
+            <p>When React sees an element representing a user-defined component, it passes JSX attributes to this component as a single object. We call this object “props”</p>
+
+        </section>
+        <section class="main-section" id="liftingState">
+            <header class="section-header">Lorem Ipsum</header>
+            <p class="byline">Components let you split the UI into independent, reusable pieces, and think about each piece in isolation. This page provides an introduction to the idea of components. You can find a detailed component API reference here.</p>
+            <p>Conceptually, components are like JavaScript functions. They accept arbitrary inputs (called “props”) and return React elements describing what should appear on the screen.</p>
+            <h2>Function and Class Components</h2>
+            <p>The simplest way to define a component is to write a JavaScript function:</p>
+            <div class="code"><code>function Welcome(props) {
+                    return h1 Hello, {props.name}/h1;
+                  }</code></div>
+            <p>This function is a valid React component because it accepts a single “props” (which stands for properties) object argument with data and returns a React element. We call such components “function components” because they are literally JavaScript
+                functions.
+            </p>
+            <p>You can also use an ES6 class to define a component:</p>
+            <div class="code"><code>class Welcome extends React.Component {
+                    render() {
+                      return h1 Hello, {this.props.name}h1;
+                    }
+                  }</code></div>
+            <p>The above two components are equivalent from React’s point of view.</p>
+            <p>Classes have some additional features that we will discuss in the next sections. Until then, we will use function components for their conciseness.</p>
+            <h2>Rendering a Component</h2>
+            <p>Previously, we only encountered React elements that represent DOM tags:</p>
+            <div class="code"><code>const element = div;</code></div>
+            <p>However, elements can also represent user-defined components:</p>
+            <div class="code"><code>const element = <Welcome name="Sara" />;</code></div>
+            <p>When React sees an element representing a user-defined component, it passes JSX attributes to this component as a single object. We call this object “props”</p>
+
+        </section>
+        <section class="main-section" id="composition">
+            <header class="section-header">Lorem Ipsum</header>
+            <p class="byline">Components let you split the UI into independent, reusable pieces, and think about each piece in isolation. This page provides an introduction to the idea of components. You can find a detailed component API reference here.</p>
+            <p>Conceptually, components are like JavaScript functions. They accept arbitrary inputs (called “props”) and return React elements describing what should appear on the screen.</p>
+            <h2>Function and Class Components</h2>
+            <p>The simplest way to define a component is to write a JavaScript function:</p>
+            <div class="code"><code>function Welcome(props) {
+                    return h1 Hello, {props.name}/h1;
+                  }</code></div>
+            <p>This function is a valid React component because it accepts a single “props” (which stands for properties) object argument with data and returns a React element. We call such components “function components” because they are literally JavaScript
+                functions.
+            </p>
+            <p>You can also use an ES6 class to define a component:</p>
+            <div class="code"><code>class Welcome extends React.Component {
+                    render() {
+                      return h1 Hello, {this.props.name}h1;
+                    }
+                  }</code></div>
+            <p>The above two components are equivalent from React’s point of view.</p>
+            <p>Classes have some additional features that we will discuss in the next sections. Until then, we will use function components for their conciseness.</p>
+            <h2>Rendering a Component</h2>
+            <p>Previously, we only encountered React elements that represent DOM tags:</p>
+            <div class="code"><code>const element = div;</code></div>
+            <p>However, elements can also represent user-defined components:</p>
+            <div class="code"><code>const element = <Welcome name="Sara" />;</code></div>
+            <p>When React sees an element representing a user-defined component, it passes JSX attributes to this component as a single object. We call this object “props”</p>
+
+        </section>
+        <section class="main-section" id="think">
+            <header class="section-header">Lorem Ipsum</header>
+            <p class="byline">Components let you split the UI into independent, reusable pieces, and think about each piece in isolation. This page provides an introduction to the idea of components. You can find a detailed component API reference here.</p>
+            <p>Conceptually, components are like JavaScript functions. They accept arbitrary inputs (called “props”) and return React elements describing what should appear on the screen.</p>
+            <h2>Function and Class Components</h2>
+            <p>The simplest way to define a component is to write a JavaScript function:</p>
+            <div class="code"><code>function Welcome(props) {
+                    return h1 Hello, {props.name}/h1;
+                  }</code></div>
+            <p>This function is a valid React component because it accepts a single “props” (which stands for properties) object argument with data and returns a React element. We call such components “function components” because they are literally JavaScript
+                functions.
+            </p>
+            <p>You can also use an ES6 class to define a component:</p>
+            <div class="code"><code>class Welcome extends React.Component {
+                    render() {
+                      return h1 Hello, {this.props.name}h1;
+                    }
+                  }</code></div>
+            <p>The above two components are equivalent from React’s point of view.</p>
+            <p>Classes have some additional features that we will discuss in the next sections. Until then, we will use function components for their conciseness.</p>
+            <h2>Rendering a Component</h2>
+            <p>Previously, we only encountered React elements that represent DOM tags:</p>
+            <div class="code"><code>const element = div;</code></div>
+            <p>However, elements can also represent user-defined components:</p>
+            <div class="code"><code>const element = <Welcome name="Sara" />;</code></div>
+            <p>When React sees an element representing a user-defined component, it passes JSX attributes to this component as a single object. We call this object “props”</p>
+
+        </section>
+
     </main>
 </body>
 
