@@ -25,25 +25,47 @@
 
     <nav id="navbar">
         <div id="nav-container">
-            <a href="#main-doc" class="nav-link" id="header">
-                <header>Main Concept</header>
-            </a>
-            <a href="#helloWorld" class="nav-link">Hello World</a>
-            <a href="#jsxIntro" class="nav-link">Introducing Jsx</a>
-            <a href="#render" class="nav-link">Rendering Elements</a>
-            <a href="#components" class="nav-link">Components and Props</a>
-            <a href="#stateLife" class="nav-link">State and Life Cycle</a>
-            <a href="#handling" class="nav-link">Handling Events</a>
-            <a href="#conditional" class="nav-link">Conditional Rendering</a>
-            <a href="#listKeys" class="nav-link">List and Keys</a>
-            <a href="#form" class="nav-link">Forms</a>
-            <a href="#liftingState" class="nav-link">Lifting State Up</a>
-            <a href="#composition" class="nav-link">Composition vs Inheritance</a>
-            <a href="#think" class="nav-link">Thinking in React</a>
+            <header><a href="#main-doc" class="nav-link" id="header">
+                Main Concept
+            </a></header>
+            <a href="#hello_World" class="nav-link">Hello World</a>
+            <a href="#introducing_jsx" class="nav-link">Introducing Jsx</a>
+            <a href="#rendering_elements" class="nav-link">Rendering Elements</a>
+            <a href="#components_and_props" class="nav-link">Components and Props</a>
+            <a href="#Lorem_Ipsum2" class="nav-link">Lorem Ipsum2</a>
+            <a href="#Lorem_Ipsum7" class="nav-link">Lorem Ipsum7</a>
+            <a href="#Lorem_Ipsum8" class="nav-link">Lorem Ipsum8</a>
+            <a href="#Lorem_Ipsum3" class="nav-link">Lorem Ipsum3</a>
+            <a href="#Lorem_Ipsum0" class="nav-link">Lorem Ipsum0</a>
+            <a href="#Lorem_Ipsum9" class="nav-link">Lorem Ipsum9</a>
+            <a href="#Lorem_Ipsum4" class="nav-link">Lorem Ipsum4</a>
+            <a href="#Lorem_Ipsum1" class="nav-link">Lorem Ipsum1</a>
         </div>
     </nav>
+
+    <!--Side Navigation-->
+    <div id="techSide" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <header><a href="#main-doc" class="nav-link" id="header">
+            Main Concept
+        </a></header>
+        <a href="#hello_World" class="nav-link">Hello World</a>
+        <a href="#introducing_jsx" class="nav-link">Introducing Jsx</a>
+        <a href="#rendering_elements" class="nav-link">Rendering Elements</a>
+        <a href="#components_and_props" class="nav-link">Components and Props</a>
+        <a href="#Lorem_Ipsum2" class="nav-link">Lorem Ipsum2</a>
+        <a href="#Lorem_Ipsum7" class="nav-link">Lorem Ipsum7</a>
+        <a href="#Lorem_Ipsum8" class="nav-link">Lorem Ipsum8</a>
+        <a href="#Lorem_Ipsum3" class="nav-link">Lorem Ipsum3</a>
+        <a href="#Lorem_Ipsum0" class="nav-link">Lorem Ipsum0</a>
+        <a href="#Lorem_Ipsum9" class="nav-link">Lorem Ipsum9</a>
+        <a href="#Lorem_Ipsum4" class="nav-link">Lorem Ipsum4</a>
+        <a href="#Lorem_Ipsum1" class="nav-link">Lorem Ipsum1</a>
+    </div>
+    <span onclick="openNav()" class="opennav">&#9776;</span>
+    <!---Side navigation end-->
     <main id="main-doc">
-        <section class="main-section" id="helloWorld">
+        <section class="main-section" id="hello_World">
             <header class="section-header">Hello World</header>
             <p>The smallest React example looks like this:</p>
             <div class="code">
@@ -68,8 +90,32 @@
             <p>React is a JavaScript library, and so we’ll assume you have a basic understanding of the JavaScript language. If you don’t feel very confident, we recommend going through a JavaScript tutorial to check your knowledge level and enable you to
                 follow along this guide without getting lost. It might take you between 30 minutes and an hour, but as a result you won’t have to feel like you’re learning both React and JavaScript at the same time.</p>
 
+            <h2>What you should already know</h2>
+            <p>This guide assumes you have the following basic background:</p>
+            <ul>
+                <li>
+                    <p>A general understanding of the Internet and the World Wide Web (WWW).
+                    </p>
+                </li>
+                <li>
+                    <p>Good working knowledge of HyperText Markup Language (HTML).</p>
+                </li>
+                <li>
+                    <p>Some programming experience. If you are new to programming, try one of the tutorials linked on the main page about JavaScript.</p>
+                </li>
+                <li>
+                    <p>A general understanding of the Internet and the World Wide Web (WWW).
+                    </p>
+                </li>
+                <li>
+                    <p>Good working knowledge of HyperText Markup Language (HTML).</p>
+                </li>
+                <li>
+                    <p>Some programming experience. If you are new to programming, try one of the tutorials linked on the main page about JavaScript.</p>
+                </li>
+            </ul>
         </section>
-        <section class="main-section" id="jsxIntro">
+        <section class="main-section" id="introducing_jsx">
             <header class="section-header">Introducing JSX</header>
             <p>Consider this variable declaration:</p>
             <div class="code">
@@ -126,7 +172,7 @@
                 We split JSX over multiple lines for readability. While it isn’t required, when doing this, we also recommend wrapping it in parentheses to avoid the pitfalls of automatic semicolon insertion.
             </p>
         </section>
-        <section class="main-section" id="render">
+        <section class="main-section" id="rendering_elements">
             <header class="section-header">Rendering Elements</header>
             <p class="byline">Elements are the smallest building blocks of React apps.</p>
             <p>An element describes what you want to see on the screen:</p>
@@ -145,7 +191,7 @@
 
 
         </section>
-        <section class="main-section" id="components">
+        <section class="main-section" id="components_and_props">
             <header class="section-header">Components and Props</header>
             <p class="byline">Components let you split the UI into independent, reusable pieces, and think about each piece in isolation. This page provides an introduction to the idea of components. You can find a detailed component API reference here.</p>
             <p>Conceptually, components are like JavaScript functions. They accept arbitrary inputs (called “props”) and return React elements describing what should appear on the screen.</p>
@@ -173,8 +219,8 @@
             <p>When React sees an element representing a user-defined component, it passes JSX attributes to this component as a single object. We call this object “props”</p>
 
         </section>
-        <section class="main-section" id="stateLife">
-            <header class="section-header">Lorem Ipsum</header>
+        <section class="main-section" id="Lorem_Ipsum2">
+            <header class="section-header">Lorem Ipsum2</header>
             <p class="byline">Components let you split the UI into independent, reusable pieces, and think about each piece in isolation. This page provides an introduction to the idea of components. You can find a detailed component API reference here.</p>
             <p>Conceptually, components are like JavaScript functions. They accept arbitrary inputs (called “props”) and return React elements describing what should appear on the screen.</p>
             <h2>Function and Class Components</h2>
@@ -201,8 +247,8 @@
             <p>When React sees an element representing a user-defined component, it passes JSX attributes to this component as a single object. We call this object “props”</p>
 
         </section>
-        <section class="main-section" id="handling">
-            <header class="section-header">Lorem Ipsum </header>
+        <section class="main-section" id="Lorem_Ipsum7">
+            <header class="section-header">Lorem Ipsum7</header>
             <p class="byline">Components let you split the UI into independent, reusable pieces, and think about each piece in isolation. This page provides an introduction to the idea of components. You can find a detailed component API reference here.</p>
             <p>Conceptually, components are like JavaScript functions. They accept arbitrary inputs (called “props”) and return React elements describing what should appear on the screen.</p>
             <h2>Function and Class Components</h2>
@@ -229,8 +275,8 @@
             <p>When React sees an element representing a user-defined component, it passes JSX attributes to this component as a single object. We call this object “props”</p>
 
         </section>
-        <section class="main-section" id="conditional">
-            <header class="section-header">Lorem Ipsum</header>
+        <section class="main-section" id="Lorem_Ipsum8">
+            <header class="section-header">Lorem Ipsum8</header>
             <p class="byline">Components let you split the UI into independent, reusable pieces, and think about each piece in isolation. This page provides an introduction to the idea of components. You can find a detailed component API reference here.</p>
             <p>Conceptually, components are like JavaScript functions. They accept arbitrary inputs (called “props”) and return React elements describing what should appear on the screen.</p>
             <h2>Function and Class Components</h2>
@@ -257,8 +303,8 @@
             <p>When React sees an element representing a user-defined component, it passes JSX attributes to this component as a single object. We call this object “props”</p>
 
         </section>
-        <section class="main-section" id="listKeys">
-            <header class="section-header">Lorem Ipsum</header>
+        <section class="main-section" id="Lorem_Ipsum3">
+            <header class="section-header">Lorem Ipsum3</header>
             <p class="byline">Components let you split the UI into independent, reusable pieces, and think about each piece in isolation. This page provides an introduction to the idea of components. You can find a detailed component API reference here.</p>
             <p>Conceptually, components are like JavaScript functions. They accept arbitrary inputs (called “props”) and return React elements describing what should appear on the screen.</p>
             <h2>Function and Class Components</h2>
@@ -285,8 +331,8 @@
             <p>When React sees an element representing a user-defined component, it passes JSX attributes to this component as a single object. We call this object “props”</p>
 
         </section>
-        <section class="main-section" id="form">
-            <header class="section-header">Lorem Ipsum</header>
+        <section class="main-section" id="Lorem_Ipsum0">
+            <header class="section-header">Lorem Ipsum0</header>
             <p class="byline">Components let you split the UI into independent, reusable pieces, and think about each piece in isolation. This page provides an introduction to the idea of components. You can find a detailed component API reference here.</p>
             <p>Conceptually, components are like JavaScript functions. They accept arbitrary inputs (called “props”) and return React elements describing what should appear on the screen.</p>
             <h2>Function and Class Components</h2>
@@ -313,8 +359,8 @@
             <p>When React sees an element representing a user-defined component, it passes JSX attributes to this component as a single object. We call this object “props”</p>
 
         </section>
-        <section class="main-section" id="liftingState">
-            <header class="section-header">Lorem Ipsum</header>
+        <section class="main-section" id="Lorem_Ipsum9">
+            <header class="section-header">Lorem Ipsum9</header>
             <p class="byline">Components let you split the UI into independent, reusable pieces, and think about each piece in isolation. This page provides an introduction to the idea of components. You can find a detailed component API reference here.</p>
             <p>Conceptually, components are like JavaScript functions. They accept arbitrary inputs (called “props”) and return React elements describing what should appear on the screen.</p>
             <h2>Function and Class Components</h2>
@@ -341,8 +387,8 @@
             <p>When React sees an element representing a user-defined component, it passes JSX attributes to this component as a single object. We call this object “props”</p>
 
         </section>
-        <section class="main-section" id="composition">
-            <header class="section-header">Lorem Ipsum</header>
+        <section class="main-section" id="Lorem_Ipsum4">
+            <header class="section-header">Lorem Ipsum4</header>
             <p class="byline">Components let you split the UI into independent, reusable pieces, and think about each piece in isolation. This page provides an introduction to the idea of components. You can find a detailed component API reference here.</p>
             <p>Conceptually, components are like JavaScript functions. They accept arbitrary inputs (called “props”) and return React elements describing what should appear on the screen.</p>
             <h2>Function and Class Components</h2>
@@ -369,8 +415,8 @@
             <p>When React sees an element representing a user-defined component, it passes JSX attributes to this component as a single object. We call this object “props”</p>
 
         </section>
-        <section class="main-section" id="think">
-            <header class="section-header">Lorem Ipsum</header>
+        <section class="main-section" id="Lorem_Ipsum1">
+            <header class="section-header">Lorem Ipsum1</header>
             <p class="byline">Components let you split the UI into independent, reusable pieces, and think about each piece in isolation. This page provides an introduction to the idea of components. You can find a detailed component API reference here.</p>
             <p>Conceptually, components are like JavaScript functions. They accept arbitrary inputs (called “props”) and return React elements describing what should appear on the screen.</p>
             <h2>Function and Class Components</h2>
@@ -399,6 +445,19 @@
         </section>
 
     </main>
+    <script>
+        /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
+        function openNav() {
+            document.getElementById("techSide").style.width = "300px";
+            document.getElementById("main-doc").style.marginLeft = "300px";
+        }
+
+        /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
+        function closeNav() {
+            document.getElementById("techSide").style.width = "0";
+            document.getElementById("main-doc").style.marginLeft = "0";
+        }
+    </script>
 </body>
 
 </html>
